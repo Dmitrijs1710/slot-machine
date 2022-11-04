@@ -247,9 +247,7 @@
                 echo "$symbol - ";
                 foreach ($pays as $key=>$pay){
                     if($pay>0){
-                        $count=$key+2;
-                        $multiPay=$multiplier*$pay;
-                        echo "$count: $multiPay  ";
+                        echo $key+2 . ": " . $multiplier*$pay. "  ";
                     }
                 }
                 echo PHP_EOL;
@@ -259,8 +257,8 @@
             echo "Bonus symbol can be any symbol expect $bonusWild\n";
             echo "BonusWild - ";
             for($i=0;$i<count($bonusWildPayTable);$i++){
-                $tmp=$i+3;
-                echo "$tmp: $bonusWildPayTable[$i]  ";
+
+                echo $i+3 . ": " . $bonusWildPayTable[$i]*$multiplier . "  "  ;
             }
             echo "in any cell\n";
             continue;
