@@ -130,13 +130,13 @@
         shuffle($randomSymbols);
 
         //don't like random_int(), maybe will use it in real projects
+        //read the docs about it, it states than it is used for gambling random generation
+        //you can always uncomment the lines below
         /*try {
             $random = random_int(0, count($randomSymbols)-1);
             return($randomSymbols[$random]);
         } catch (Exception $e) {
             var_dump($e);
-
-
         }*/
         return $randomSymbols[array_rand($randomSymbols)];
 
