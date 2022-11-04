@@ -127,7 +127,19 @@
                 $randomSymbols[]=$symbol;
             }
         }
+        shuffle($randomSymbols);
+
+        //don't like random_int(), maybe will use it in real projects
+        /*try {
+            $random = random_int(0, count($randomSymbols)-1);
+            return($randomSymbols[$random]);
+        } catch (Exception $e) {
+            var_dump($e);
+
+
+        }*/
         return $randomSymbols[array_rand($randomSymbols)];
+
     }
 
     function displaySlot(array $slot):void{
